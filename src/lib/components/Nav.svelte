@@ -3,28 +3,37 @@
   </script>
     
     <!--Nav-->
-	<nav class="bg-gray-800 p-2 mt-0 w-full"> <!-- Add this to make the nav fixed: "fixed z-10 top-0" -->
-		<div class="container mx-auto flex flex-wrap items-center">
-			<div class="flex w-full md:w-1/2 justify-center md:justify-start text-white font-extrabold">
-				<a class="text-white no-underline hover:text-white hover:no-underline" href="#">
-					<span class="text-2xl pl-2"><Bahai width="2em" color="orange" /> Brand</span>
-				</a>
-			</div>
-			<div class="flex w-full pt-2 content-center justify-between md:w-1/2 md:justify-end">
-				<ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
-					<li class="mr-3">
-						<a class="inline-block py-2 px-4 text-white no-underline" href="#">Active</a>
-					</li>
-					<li class="mr-3">
-						<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">link</a>
-					</li>
-					<li class="mr-3">
-						<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">link</a>
-					</li>
-					<li class="mr-3">
-						<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">link</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+				<nav id="nav" class="fixed inset-x-0 top-0 flex flex-row justify-between z-10 text-white bg-transparent">
+
+					<div class="p-4">
+						<div class="font-extrabold tracking-widest text-xl"><a href="#" class="transition duration-500 hover:text-indigo-500"><span class="text-2xl pl-2"><Bahai width="2em" color="orange" /> Brand</span></a></div>
+					</div>
+			  
+					<!-- Nav Items Working on Tablet & Bigger Sceen -->
+					<div class="p-4 hidden md:flex flex-row justify-between font-bold">
+						<a id="hide-after-click" href="#about" class="mx-4 text-lg  border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">About</a>
+						<a href="#whyus" class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Why
+							Us ?</a>
+						<a href="#showcase" class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Our
+							Products</a>
+					</div>
+			  
+					<!-- Burger Nav Button on Mobile -->
+					<div id="nav-open" class="p-4 md:hidden">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+						 stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+							<line x1="3" y1="12" x2="21" y2="12"></line>
+							<line x1="3" y1="6" x2="21" y2="6"></line>
+							<line x1="3" y1="18" x2="21" y2="18"></line>
+						</svg>
+					</div>
+				</nav>
+			  
+				<!-- Opened Nav in Mobile, you can use javascript/jQuery -->
+				<div id="nav-opened" class="fixed left-0 right-0 hidden bg-white mx-2 mt-16 rounded-br rounded-bl shadow z-10">
+					<div class="p-2 divide-y divide-gray-600 flex flex-col">
+						<a href="#about" class="p-2 font-semibold hover:text-indigo-700">About</a>
+						<a href="#whyus" class="p-2 font-semibold hover:text-indigo-700">Why Us ?</a>
+						<a href="#showcase" class="p-2 font-semibold hover:text-indigo-700">Our Products</a>
+					</div>
+				</div>

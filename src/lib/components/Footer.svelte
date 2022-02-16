@@ -1,4 +1,4 @@
-<div class="w-full pt-16 pb-6 text-sm text-center fade-in">
+<div class="w-full pt-16 pb-6 text-sm text-center fade-in bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900">
     <a class="text-gray-500 no-underline hover:no-underline" href="#">&copy; 2022</a>
     - Template by
     <a class="text-gray-500 no-underline hover:no-underline" href="https://">.com</a>

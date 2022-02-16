@@ -1,15 +1,45 @@
-<!--Hero-->
-<div class="container mx-auto flex flex-col md:flex-row items-center my-12 md:my-24">
-    <!--Left Col-->
-    <div class="flex flex-col w-full lg:w-1/2 justify-center items-start pt-12 pb-24 px-6">
-        <p class="uppercase tracking-loose">Witty Tagline</p>
-        <h1 class="font-bold text-3xl my-4">My Super App</h1>
-        <p class="leading-normal mb-4">Enter your super app's description here... The key is to find the right length.  Don't want it to be too long, but then don't want it to be too short so that it looks weird between the title and button below.</p>
-        <button class="bg-transparent hover:bg-gray-900 text-gray-900 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-gray-900 hover:border-transparent">Super Button</button>
-    </div>
-    <!--Right Col-->
-    <div class="w-full lg:w-1/2 lg:py-6 text-center">
-        <!--Add your product image here-->
-        <svg class="fill-current text-gray-900 w-3/5 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M17 6V5h-2V2H3v14h5v4h3.25H11a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6zm-5.75 14H3a2 2 0 0 1-2-2V2c0-1.1.9-2 2-2h12a2 2 0 0 1 2 2v4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-5.75zM11 8v8h6V8h-6zm3 11a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
-    </div>
-</div>
+<script>
+    import { browser } from '$app/env';
+    import backgroundImage from '$lib/assets/header.png';
+    import backgroundImageWebp from '$lib/assets/header.png?format=webp';
+   
+    function serveWebp() {
+      return browser && document.documentElement.classList.contains('webp');
+    }
+   
+    const backgroundImageUsed = serveWebp() ? backgroundImageWebp : backgroundImage;
+  </script>
+
+<svelte:head>
+  <title>Page Title</title>
+  <meta name="description" content="A description" />
+  <meta name="theme-color" content="#ffdf00" />
+  <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+  <script
+    async
+    integrity="sha384-xms8Nhw0czGEIWf0BZpCsaCY9PPeFf6bJ6cG0CNYoVvDK3M0146DNIywperKRSNI"
+    src="/modernizr-webp.js"
+    type="text/javascript"></script>
+</svelte:head>
+
+
+
+
+  <header id="up" class="bg-center bg-fixed bg-no-repeat bg-center bg-cover h-screen relative">
+      <!-- Overlay Background + Center Control -->
+      <div class="h-screen bg-opacity-50 bg-black flex items-center justify-center" style={`background-image: url(${backgroundImageUsed})`}>
+        
+          <div class="mx-2 text-center">
+              <h1 class="text-gray-100 font-extrabold text-4xl xs:text-5xl md:text-6xl">
+                  <span class="text-white">Right</span> Place To
+         </h1>
+         <h2 class="text-gray-200 font-extrabold text-3xl xs:text-4xl md:text-5xl leading-tight">
+          Get a <span class="text-white">Better</span> and <span class="text-white">Professionals</span> Design
+         </h2>
+         <div class="inline-flex">
+         <button class="p-2 my-5 mx-2 bg-indigo-700 hover:bg-indigo-800 font-bold text-white rounded border-2 border-transparent hover:border-indigo-800 shadow-md transition duration-500 md:text-xl">Hire US!</button>
+         <a href="#about"><button class="p-2 my-5 mx-2 bg-transparent border-2 bg-indigo-200 bg-opacity-75 hover:bg-opacity-100 border-indigo-700 rounded hover:border-indigo-800 font-bold text-indigo-800 shadow-md transition duration-500 md:text-lg">Learn More</button></a>
+         </div>
+      </div>
+  </div>
+</header>
